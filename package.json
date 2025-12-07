@@ -19,7 +19,7 @@
     "pngjs": "^7.0.0"
   },
   "scripts": {
-    "test": "playwright test",
+    "test": "playwright test  --project='chromium'",
     "test-headed": "playwright test --headed",
     "tets-ui": "npx playwright test --ui",
     "prettier": "npx prettier --write \"**/*.{js,jsx}\""

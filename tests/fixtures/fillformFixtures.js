@@ -1,6 +1,6 @@
 import { TextBoxPage } from '../../src/pageObjects/index.js';
 import { AdBlock } from '../../src/utils/index.js';
-import { expect, test as base } from '@playwright/test';
+import { test as base } from '@playwright/test';
 import { DataStorage, UserCreator } from '../../src/helper/index.js';
 
 export const test = base.extend({
@@ -20,11 +20,5 @@ export const test = base.extend({
     DataStorage.setNamespace(namespace, userNumber, user);
 
     await use({ namespace, userNumber, user });
-  },
-
-  expectedOutputFieldsValues: async ({}, use) => {
-    await use(async user => {
-      await expect(textBox.outputSection).toContainText(user.fullName);
-    });
   },
 });

@@ -4,7 +4,7 @@ import { MainPage } from '../src/pageObjects';
 test.beforeEach(async ({ page }) => {
   await page.goto('https://demoqa.com', { waitUntil: 'domcontentloaded' });
 });
-test.describe('Main', () => {
+test.describe('Main @entity_18', () => {
   test('Has header banner', async ({ page }) => {
     const mainPage = new MainPage(page);
     const headerBanner = mainPage.headerLocator;

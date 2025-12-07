@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
  * 5. Check another category card sections (e.g., "Forms").
  */
 
-test('Check navigation', async ({ page }) => {
+test('Check navigation @entity_18', async ({ page }) => {
   const mainPage = await new MainPage(page);
   const randomColor = Randomizer.randomValueFromArray(data.colors);
   await test.step('Click on "Elements" card', async () => {

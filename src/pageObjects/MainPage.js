@@ -15,6 +15,9 @@ export default class MainPage extends BasePage {
     this.multiselectField = page.locator('#autoCompleteMultipleContainer input');
     this.optionInList = option =>
       page.locator(`//div[contains(text(), "${option}") and contains(@class, "auto-complete__option")]`);
+    this.cardPngLocator = avatar =>
+      page.locator(`//div[contains(@class, "card")]//*[contains(text(),
+     "${avatar}")]/preceding::div[contains(@class, "avatar")][1]`);
   }
 
   async checkCategoryCard(cardName) {

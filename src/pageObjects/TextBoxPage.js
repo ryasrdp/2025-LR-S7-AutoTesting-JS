@@ -37,4 +37,8 @@ export default class TextBoxPage extends BasePage {
     await expect(this.outputCurrentAddress).toContainText(user.address);
     await expect(this.outputPermanentAddress).toContainText(user.addressAnother);
   }
+
+  async isFieldInvalid(fieldLocator) {
+    return await fieldLocator.getAttribute('class').then(classes => classes.includes('field-error'));
+  }
 }

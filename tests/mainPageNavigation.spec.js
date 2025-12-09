@@ -8,16 +8,6 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://demoqa.com', { waitUntil: 'domcontentloaded' });
 });
 
-/**
- * Test Case: Click on category card
- * steps:
- * 1. Navigate to the main page.
- * 2. Click on the "Elements" category card.
- * 3. Verify that the "Elements" section is expanded.
- * 4. Check that another sections are collapsed.
- * 5. Check another category card sections (e.g., "Forms").
- */
-
 test('Check navigation @entity_18', async ({ page }) => {
   const mainPage = await new MainPage(page);
   const randomColor = Randomizer.randomValueFromArray(data.colors);

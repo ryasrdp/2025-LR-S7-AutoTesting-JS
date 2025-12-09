@@ -46,7 +46,7 @@ export default class MainPage extends BasePage {
 
   async clickGroupElement(elementName) {
     const groupElementLocator = this.groupElementLocator(elementName);
-    //  await groupElementLocator.waitFor({state: 'visible'});
+    await groupElementLocator.waitFor({ state: 'visible' });
     await groupElementLocator.click();
   }
 
@@ -58,13 +58,14 @@ export default class MainPage extends BasePage {
       return true;
     } else {
       console.log('Section is not expanded');
+      return false;
     }
   }
 
   async selectMultipleColor(options) {
     await this.multiselectField.click();
     await this.multiselectField.fill(options);
-    //  await this.optionInList.waitFor({state: 'visible'});
+    await this.optionInList(options).waitFor({ state: 'visible' });
     await this.optionInList(options).click();
   }
 

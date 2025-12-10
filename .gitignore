@@ -14,7 +14,6 @@ test-report/
 # Calabash / Cucumber
 rerun/
 reports/
-screenshots/
 screenshot*.png
 test-servers/
 
@@ -265,3 +264,6 @@ junit.xml
 /jest_html_reporters/
 /jest-html-reporters-attach
 /html-report/
+
+# Playwright
+/playwright/.auth/
